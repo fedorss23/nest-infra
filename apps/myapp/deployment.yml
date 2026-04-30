@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: api
-        image: myapp:latest
+        image: nefor32/myapp:f2815749b34f3d532c4c9515270bb9e812817a13
         ports:
         - containerPort: 4200
