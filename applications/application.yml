@@ -15,6 +15,6 @@ spec:
     namespace: myapp
   
   syncPolicy:
-    authomated:
+    automated:
       prune: true
       selfHeal: true
