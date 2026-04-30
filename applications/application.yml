@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+
+metadata: 
+  name: myapp
+
+spec:
+  source:
+    repoURL: https://github.com/fedorss23/nest-infra
+    path: apps/myapp
+    targetRevision: main
+  
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: myapp
+  
+  syncPolicy:
+    authomated:
+      prune: true
+      selfHeal: true
