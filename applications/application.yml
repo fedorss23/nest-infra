@@ -1,19 +1,20 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
-
-metadata: 
+metadata:
   name: myapp
-
+  namespace: argocd
 spec:
+  project: default
+
   source:
-    repoURL: https://github.com/fedorss23/nest-infra
-    path: apps/myapp
+    repoURL: https://github.com/fedorss23/nest-infra.git
     targetRevision: main
-  
+    path: applications
+
   destination:
     server: https://kubernetes.default.svc
-    namespace: myapp
-  
+    namespace: default
+
   syncPolicy:
     automated:
       prune: true
