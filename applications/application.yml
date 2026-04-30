@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/fedorss23/nest-infra.git
     targetRevision: main
-    path: applications
+    path: apps/myapp
 
   destination:
     server: https://kubernetes.default.svc
