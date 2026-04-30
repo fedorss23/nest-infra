@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: api
-        image: myapp:latest
+        image: nefor32/myapp:1e945732dea1c1e803a916c758a8bfac3237bf5d
         imagePullPolicy: Never
         ports:
         - containerPort: 4200
